@@ -3,7 +3,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-ul {
+
+li {
   list-style-type: none;
 }
 img {
@@ -63,10 +64,13 @@ p {
 }
 .cuisine {
   padding: 4rem 1.5rem;
+  max-width: 1300px;
+  margin: auto;
 }
 .cuisine h2 {
   font-size: 1.8rem;
   margin-bottom: 2rem;
+  color: #111827;
 }
 .cuisine .cards {
   display: grid;
@@ -85,15 +89,55 @@ p {
 }
 .cuisine .cards article h3 {
   margin-bottom: 1rem;
+  color: #111827;
 }
 .cuisine .cards article p {
   color: #333;
   margin-bottom: 2rem;
   font-size: 0.9rem;
 }
+.footer {
+  padding: 4rem 1.5rem;
+  background-color: #111827;
+}
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1300px;
+  margin: auto;
+}
+.footer-inner h3 {
+  color: #fff;
+  font-size: 1.8rem;
+}
+.footer article li {
+  margin-bottom: 1rem;
+}
+.footer article li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer article li a:focus {
+  outline: 2px dotted #fff;
+}
+.footer article li a:hover {
+  opacity: 0.6;
+}
 @media (min-width: 643px) {
   .showcase .overlay h1 {
     font-size: 3rem;
+  }
+  .footer-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .cuisine .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-inner {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 992px) {
@@ -116,9 +160,15 @@ p {
   .cuisine .cards article p {
     font-size: 1rem;
   }
+  .footer-inner {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @media (min-width: 1280px) {
   .showcase .overlay h1 {
     font-size: 6rem;
+  }
+  .footer-inner {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
